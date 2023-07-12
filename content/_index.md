@@ -29,33 +29,41 @@ aboutMeHeading: "Timo <br/> Brandstätter"
 
 experience:
     exp1:
-        title:  "Co-Founder, CTO"
-        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-        logo: "/timato.svg"
-        alt: "Timato logo"
-        year: "2020"
-        number: "1"
-    exp2:
         title:  "Contractor Senior Software Enginer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
         logo: "/swirlds-labs.png"
-        alt: "Timato logo"
-        year: "2021"
-        number: "2"
+        alt: "Swirlds Labs logo"
+        year: "2023"
+        number: "1"
+    exp2:
+      title:  "Co-Founder, CTO"
+      description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+      logo: "/timato.svg"
+      alt: "Timato logo"
+      year: "2021"
+      number: "2"        
     exp3:
+      title:  "Founder, CEO"
+      description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+      logo: "/logo.svg"
+      alt: "Takka logo"
+      year: "2021"
+      number: "3"
+    exp4:
         title:  "Co-Founder, Senior Software Engineer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
         logo: "/karakun.png"
-        alt: "Timato logo"
-        year: "2022"
-        number: "3"
-    exp4:
+        alt: "Karakun logo"
+        year: "2018"
+        number: "4"
+    exp5:
         title:  "Software Engineer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
         logo: "/canoo.png"
-        alt: "Timato logo"
-        year: "2023"
-        number: "4"
+        alt: "Canoo logo"
+        year: "2015"
+        number: "5"
+       
 
 contactSubheading: "Have a question?"
 contactTitle: "Let’s Get <br/> in Touch"
