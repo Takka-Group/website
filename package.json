@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx tailwindcss -i ./tailwind.css -o ./assets/style.css --minify",
     "watch": "npx tailwindcss -i ./tailwind.css -o ./assets/style.css --watch",
-    "dev:hugo": "hugo server",
+    "dev:hugo": "hugo server"
   },
   "keywords": [],
   "author": "",
