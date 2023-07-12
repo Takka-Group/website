@@ -45,7 +45,7 @@ experience:
     exp3:
       title:  "Founder, CEO"
       description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-      logo: "/logo.svg"
+      logo: "logo.svg"
       alt: "Takka logo"
       year: "2021"
       number: "3"
