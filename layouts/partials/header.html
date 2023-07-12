@@ -4,7 +4,7 @@
 
 
 <div class="container relative">
-    <div class="rounded-full w-[750px] h-[750px] bg-round absolute inset-x-1/4 -top-72"></div>
+    <div class="rounded-full w-[750px] h-[750px] bg-round absolute inset-x-1/4 -top-72 sm:block hidden"></div>
     <div class="lg:grid lg:grid-cols-3 flex items-center justify-between gap-5 content-center h-24 relative">
         <div>
             <a href="/" aria-label="Logo">
@@ -45,7 +45,7 @@ x-transition:leave="ease-in duration-150"
 x-transition:leave-start="opacity-100" 
 x-transition:leave-end="opacity-0"  class="bg-jet-1 backdrop-blur-md fixed inset-0 z-30">
     <div class="w-full h-full relative">
-        <button type="button" aria-label="close button" class=" text-white  absolute right-8 top-6 hover:text-emerald-1 transition-colors ease-in-out duration-150" @click="navbar = false">
+        <button type="button" aria-label="close button" class=" text-white  absolute right-4 top-7 hover:text-emerald-1 transition-colors ease-in-out duration-150" @click="navbar = false">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>

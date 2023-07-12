@@ -11,12 +11,12 @@ services:
         title:  "Software Development"
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         alt: "Code Icon"
-        icon: "/code-icon.svg"
+        icon: "code-icon.svg"
     consulting:
         title: "consulting"
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         alt: "Consulting Icon"
-        icon: "/consulting-icon.svg"
+        icon: "consulting-icon.svg"
 
 aboutMeTitle: "About Me"
 aboutMedescription: "<p class='text-base text-jet-3 leading-8'>
@@ -29,19 +29,19 @@ aboutMeHeading: "Timo <br/> Brandstätter"
 
 experience:
     exp1:
+        title:  "Co-Founder, CTO"
+        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+        logo: "timato.svg"
+        alt: "Timato logo"
+        year: "2020"
+
+    exp2:
         title:  "Contractor Senior Software Enginer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-        logo: "/swirlds-labs.png"
-        alt: "Swirlds Labs logo"
-        year: "2023"
-        number: "1"
-    exp2:
-      title:  "Co-Founder, CTO"
-      description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-      logo: "/timato.svg"
-      alt: "Timato logo"
-      year: "2021"
-      number: "2"        
+        logo: "swirlds-labs.png"
+        alt: "Timato logo"
+        year: "2021"
+
     exp3:
       title:  "Founder, CEO"
       description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
@@ -52,18 +52,46 @@ experience:
     exp4:
         title:  "Co-Founder, Senior Software Engineer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-        logo: "/karakun.png"
-        alt: "Karakun logo"
-        year: "2018"
-        number: "4"
-    exp5:
+        logo: "karakun.png"
+        alt: "Timato logo"
+        year: "2022"
+
+    exp4:
         title:  "Software Engineer"
         description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
-        logo: "/canoo.png"
-        alt: "Canoo logo"
-        year: "2015"
-        number: "5"
-       
+        logo: "canoo.png"
+        alt: "Timato logo"
+        year: "2023"
+
+    exp5:
+        title:  "Co-Founder, CTO"
+        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+        logo: "timato.svg"
+        alt: "Timato logo"
+        year: "2020"
+
+    exp6:
+        title:  "Contractor Senior Software Enginer"
+        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+        logo: "swirlds-labs.png"
+        alt: "Timato logo"
+        year: "2021"
+
+    exp7:
+        title:  "Co-Founder, Senior Software Engineer"
+        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+        logo: "karakun.png"
+        alt: "Timato logo"
+        year: "2022"
+
+    exp8:
+        title:  "Software Engineer"
+        description: "Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut"
+        logo: "canoo.png"
+        alt: "Timato logo"
+        year: "2024"
+        
+
 
 contactSubheading: "Have a question?"
 contactTitle: "Let’s Get <br/> in Touch"
