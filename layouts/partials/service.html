@@ -1,0 +1,16 @@
+<div class=" bg-jet-4 rounded-[20px] sm:p-8 sm:pb-12 p-6 pb-8 space-y-7">
+    <div class="flex items-center gap-8">
+        <div class="w-20 h-20 shrink-0 rounded-[20px] bg-gradient-to-b from-emerald-2 to-transparent flex items-center justify-center">
+            <img class="w-12 h-12" alt="{{ .alt }}" src="{{ .icon }}"/>
+        </div>
+        <div class="">
+            <h3 class="text-white font-semibold text-2xl pt-5 pb-6">
+                {{ .title }}
+            </h3>
+            <div class="w-16 bg-emerald-1 h-0.5"></div>
+        </div>
+    </div>    
+    <p class="text-base text-jet-3 leading-8 sm:ml-28">
+        {{ .description | safeHTML }}
+    </p>
+</div>

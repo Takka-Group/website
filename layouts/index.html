@@ -1,0 +1,190 @@
+{{ define "main" }}
+
+{{ $mountains := resources.Get "/mountains.svg" }}
+{{ $fire := resources.Get "/fire.svg" }}
+{{ $moon := resources.Get "/moon.svg" }}
+{{ $aboutMe := resources.Get "/aboutme-img.svg" }}
+{{ $lines := resources.Get "/lines-2.svg" }}
+
+<div class="h-[calc(100vh-96px)] w-screen relative">
+    <div class="flex items-center justify-center">
+        <img class="w-full absolute bottom-0 inset-x-0 -z-10" alt="Mountains" src="{{ $mountains.RelPermalink }}"/>
+        <img class="w-[28%] absolute bottom-0 -z-10" alt="Fire image" src="{{ $fire.RelPermalink }}"/>
+    </div>
+    <img class="w-[6%] absolute lg:top-1/3 top-2/4 right-[18%] -z-20" alt="Moon Icon" src="{{ $moon.RelPermalink }}"/>
+
+    <div class="container">
+        <div class="relative max-w-2xl mx-auto py-24 flex flex-col items-center justify-center">
+            <p class="text-center text-white uppercase text-sm tracking-[0.2rem] mb-2">{{ $.Param "subheading" | safeHTML }}</p>
+            <h1 class="text-center font-shine lg:text-[100px] sm:text-[80px] text-[50px] text-white tracking-wide">
+                {{ $.Param "heading" | safeHTML }}
+            </h1>
+            <p class="text-center text-sm leading-7 max-w-lg mx-auto text-jet-3 mt-3">
+               {{ $.Param "description" | safeHTML }}
+            </p>
+            <a href="#getInTouch" class="button-primary mt-10">
+                Get In Touch
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="sm:pt-32 pt-20 flex flex-col w-full">
+    <section id="services" class="scroll-mt-12">
+        <div class="container sm:space-y-20 space-y-12 max-w-6xl mx-auto sm:pb-32 pb-20">
+            <h2 class=" text-[42px] text-white font-semibold">
+                {{ $.Param "serviceTitle" | safeHTML }}
+            </h2>
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-10">
+                {{ range .Params.services }}
+                    {{ partial "partials/service.html" (dict "icon" .icon "title"  .title "description" .description  "alt" .alt)}}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutMe" class="scroll-mt-8">
+        <div class="container sm:pb-32 pb-20">
+            <div class="flex lg:flex-row flex-col items-center lg:gap-2 gap-16">
+                <div class="relative lg:w-1/2 w-full flex items-center justify-center lg:h-[550px] sm:h-[450px] h-72">
+                    <img class="w-full h-full absolute inset-0 -z-10 -ml-[33%]" alt="About Me image" src="{{ $aboutMe.RelPermalink }}"/>
+                    <p class=" text-white font-shine md:text-[92px] sm:text-[80px] text-[65px] drop-shadow-text lg:leading-[110px] leading-tight sm:mt-32 mt-16 lg:ml-0 sm:-ml-24">
+                        {{ $.Param "aboutMeHeading" | safeHTML }}
+                    </p>
+                </div>
+                <div class="space-y-12 lg:w-1/2 w-full">
+                    <h3 class="text-[42px] text-white font-semibold">{{ $.Param "aboutMeTitle" | safeHTML }}</h3>
+                    <div class="space-y-7">
+                        {{ $.Param "aboutMedescription" | safeHTML }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="scroll-mt-16">
+        <div class="container relative ">
+            <div class="space-y-10 max-w-6xl mx-auto">
+                <h3 class="text-[42px] text-white text-center font-semibold pb-20">Work Experience</h3>
+                <div class="flex flex-col w-full relative h-full lg:gap-0 gap-12">
+                    
+                    <div class=" absolute h-full inset-0 lg:-mt-20 -mt-10">
+                        <div class="flex justify-center relative p-1  h-full">
+                            <div class="flex justify-center lg:items-end absolute top-0">
+                                <div class="w-px bg-emerald-1 h-44 z-0"></div>
+                                <div class="w-2 h-2 rounded-full bg-emerald-1 absolute"></div>
+                            </div>
+                            <div class="w-px bg-jet-2 -z-10 h-full absolute"></div>
+                        </div>
+                    </div>
+
+                    {{ range .Params.experience }}
+                        {{ partial "partials/experience.html" (dict "logo" .logo "title"  .title "description" .description  "alt" .alt "year" .year "number" .number)}}
+                    {{ end }}
+                    
+                    <!-- <div class="flex even:flex-row-reverse gap-8 -mt-12 first:mt-0">
+                        <div class="w-full">
+                            <div class="bg-jet-4 rounded-[10px] p-12 relative">
+                                <span class="absolute top-8 right-8 bg-emerald-1/10 rounded-full text-center w-24 shrink-0 block py-2.5 text-sm font-semibold text-emerald-1 tracking-wide">
+                                    2021
+                                </span>
+                                <div class="space-y-6">
+                                    <img class="w-32" src="" />
+                                    <div class="space-y-4">
+                                        <p class="text-white font-semibold">Co-Founder, CTO</p>
+                                        <p class="text-base text-jet-3 leading-8">
+                                            Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-12 flex justify-center relative p-2 ">
+                            <div class="flex justify-center items-end absolute">
+                                <div class="w-px bg-emerald-1 h-44 z-0"></div>
+                                <div class="w-2 h-2 rounded-full bg-emerald-1 absolute"></div>
+                            </div>
+                            <div class="w-px bg-jet-5 -z-10"></div>
+                        </div>
+                        <div class="w-full"></div>
+                    </div>
+                    <div class="flex even:flex-row-reverse gap-8 -mt-12 first:mt-0">
+                        <div class="w-full">
+                            <div class="bg-jet-4 rounded-[10px] p-12 relative">
+                                <span class="absolute top-8 right-8 bg-emerald-1/10 rounded-full text-center w-24 shrink-0 block py-2.5 text-sm font-semibold text-emerald-1 tracking-wide">
+                                    2022
+                                </span>
+                                <div class="space-y-6">
+                                    <img class="w-32" src="" />
+                                    <div class="space-y-4">
+                                        <p class="text-white font-semibold">Contractor Senior Software Engineer</p>
+                                        <p class="text-base text-jet-3 leading-8">
+                                            Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-12 flex justify-center relative p-2 ">
+                            <div class="w-px bg-jet-5 -z-10"></div>
+                        </div>
+                        <div class="w-full"></div>
+                    </div>
+                    <div class="flex even:flex-row-reverse gap-8 -mt-12 first:mt-0">
+                        <div class="w-full">
+                            <div class="bg-jet-4 rounded-[10px] p-12 relative">
+                                <span class="absolute top-8 right-8 bg-emerald-1/10 rounded-full text-center w-24 shrink-0 block py-2.5 text-sm font-semibold text-emerald-1 tracking-wide">
+                                    2021
+                                </span>
+                                <div class="space-y-6">
+                                    <img class="w-32" src="" />
+                                    <div class="space-y-4">
+                                        <p class="text-white font-semibold">Co-Founder, CTO</p>
+                                        <p class="text-base text-jet-3 leading-8">
+                                            Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-12 flex justify-center relative p-2 ">
+                            <div class="w-px bg-jet-5 -z-10"></div>
+                        </div>
+                        <div class="w-full"></div>
+                    </div> -->
+                </div>
+                <div class="absolute inset-x-0 -bottom-24 bg-gradient-to-b from-transparent via-jet-1 to-jet-1 h-[300px] w-full z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-jet-4 lg:pt-72 lg:pb-52 sm:pt-48 sm:pb-36 pt-36 pb-16 -scroll-mt-24" id="getInTouch">
+        <img class="absolute h-full left-0 bottom-0 lg:block hidden" alt="background lines" src="{{ $lines.RelPermalink }}"/>
+        <div class="container relative">
+            <div class="flex lg:flex-row flex-col items-center lg:gap-5 gap-12 max-w-6xl mx-auto">
+                <d  iv class="lg:w-5/12 w-full space-y-5">
+                    <div>
+                        <p class="text-white text-xl py-5"> {{ $.Param "subheading" | safeHTML }}</p>
+                        <div class="w-16 bg-emerald-1 h-0.5"></div>
+                    </div>
+                    <p class="sm:text-7xl text-5xl font-semibold text-white sm:leading-[80px] leading-tight">
+                        {{ $.Param "contactTitle" | safeHTML }}
+                    </p>
+                </d>
+                <div class="lg:w-7/12 w-full">
+                    <form >
+                        <div class="space-y-4">
+                            <input type="text" name="name" class="w-full bg-transparent border-b border-jet-5 py-3 px-0 text-jet-3 placeholder:text-jet-3 focus:outline-none focus:border-b-emerald-1 transition-colors ease-in-out duration-150" placeholder="Name" />
+                            <input type="email" name="email" class="w-full bg-transparent border-b border-jet-5 py-3 px-0 text-jet-3 placeholder:text-jet-3 focus:outline-none focus:border-b-emerald-1 transition-colors ease-in-out duration-150" placeholder="Email" />
+                            <textarea type="email" name="email" rows="6" class="w-full bg-transparent border-b border-jet-5 py-3 px-0 text-jet-3 placeholder:text-jet-3 focus:outline-none focus:border-b-emerald-1 transition-colors ease-in-out duration-150" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="button-primary mt-12">
+                            Get In Touch
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>    
+</div>
+{{ end }}

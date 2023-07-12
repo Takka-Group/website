@@ -1,0 +1,30 @@
+<div class="flex even:flex-row-reverse gap-24 lg:-mt-12 first:mt-0">
+    <div class="w-full">
+        <div class="bg-jet-4 rounded-[10px] sm:p-12 p-6 relative">
+            <span class="absolute sm:top-8 sm:right-8 top-5 right-5 bg-emerald-1/10 rounded-full text-center w-24 shrink-0 block py-2.5 text-sm font-semibold text-emerald-1 tracking-wide">
+                {{ .year }}
+            </span>
+            <div class="space-y-6">
+                <img class="w-32" alt="{{ .alt }}" src="{{ .logo }}" />
+                <div class="space-y-4">
+                    <p class="text-white font-semibold">{{ .title }}</p>
+                    <p class="text-base text-jet-3 leading-8">
+                        {{ .description | safeHTML }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="w-12 flex justify-center relative p-2 ">
+        {{ if (isset .Params "number") }}
+            <div class="flex justify-center items-end absolute">
+                <div class="w-px bg-emerald-1 h-44 z-0"></div>
+                <div class="w-2 h-2 rounded-full bg-emerald-1 absolute"></div>
+            </div>
+            <div class="w-px bg-jet-5 -z-10"></div>
+        {{ else }}
+            <div class="w-px bg-jet-5 -z-10"></div>
+        {{ end }}
+    </div> -->
+    <div class="w-full lg:block hidden"></div>
+</div>
