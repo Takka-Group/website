@@ -64,17 +64,19 @@
 
     <section id="experience" class="scroll-mt-16">
         <div class="container relative ">
-            <div class="space-y-10 max-w-6xl mx-auto">
-                <h3 class="text-[42px] text-white text-center font-semibold pb-20">Work Experience</h3>
+            <div class="space-y-10 max-w-6xl mx-auto h-[900px] overflow-y-auto scrollbar-none relative">
+                <h3 class="text-[42px] text-white text-center font-semibold sticky top-0 pt-12 sm:pb-36 pb-24 z-20 bg-gradient-to-b from-jet-1 via-jet-1 to-transparent">Work Experience</h3>
                 <div class="flex flex-col w-full relative h-full lg:gap-0 gap-12">
                     
                     <div class=" absolute h-full inset-0 lg:-mt-20 -mt-10">
-                        <div class="flex justify-center relative p-1  h-full">
-                            <div class="flex justify-center lg:items-end absolute top-0">
-                                <div class="w-px bg-emerald-1 h-44 z-0"></div>
-                                <div class="w-2 h-2 rounded-full bg-emerald-1 absolute"></div>
+                        <div class="sticky top-0 h-[125%]">
+                            <div class="flex justify-center relative p-1 h-full">
+                                <div class="flex justify-center lg:items-end absolute top-0">
+                                    <div class="w-px bg-emerald-1 h-44 z-0"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-1 absolute"></div>
+                                </div>
+                                <div class="w-px bg-jet-2 -z-10 h-full absolute"></div>
                             </div>
-                            <div class="w-px bg-jet-2 -z-10 h-full absolute"></div>
                         </div>
                     </div>
 
@@ -153,13 +155,13 @@
                         <div class="w-full"></div>
                     </div> -->
                 </div>
-                <div class="absolute inset-x-0 -bottom-24 bg-gradient-to-b from-transparent via-jet-1 to-jet-1 h-[300px] w-full z-10"></div>
             </div>
+            <div class="absolute inset-x-0 -bottom-24 bg-gradient-to-b from-transparent via-jet-1 to-jet-1 sm:h-[300px] h-[300px] w-full z-10"></div>
         </div>
     </section>
 
     <section class="relative bg-jet-4 lg:pt-72 lg:pb-52 sm:pt-48 sm:pb-36 pt-36 pb-16 -scroll-mt-24" id="getInTouch">
-        <img class="absolute h-full left-0 bottom-0 lg:block hidden" alt="background lines" src="{{ $lines.RelPermalink }}"/>
+        <img class="absolute left-0 bottom-0 2xl:max-w-2xl max-w-xl w-full lg:block hidden" alt="background lines" src="{{ $lines.RelPermalink }}"/>
         <div class="container relative">
             <div class="flex lg:flex-row flex-col items-center lg:gap-5 gap-12 max-w-6xl mx-auto">
                 <d  iv class="lg:w-5/12 w-full space-y-5">

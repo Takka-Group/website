@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class=" scroll-smooth bg-jet-1 antialiased overflow-x-hidden" >
+<html lang="en" class=" scroll-smooth bg-jet-1 antialiased" >
     {{- partial "head.html" . -}}
-    <body x-data="{navbar:false}">
+    <body x-data="{navbar:false}" class="overflow-x-hidden">
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
