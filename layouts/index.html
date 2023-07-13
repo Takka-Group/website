@@ -94,7 +94,7 @@
             <div class="flex lg:flex-row flex-col items-center lg:gap-5 gap-12 max-w-6xl mx-auto">
                 <d  iv class="lg:w-5/12 w-full space-y-5">
                     <div>
-                        <p class="text-white text-xl py-5"> {{ $.Param "subheading" | safeHTML }}</p>
+                        <p class="text-white text-xl py-5"> {{ $.Param "contactSubheading" | safeHTML }}</p>
                         <div class="w-16 bg-emerald-1 h-0.5"></div>
                     </div>
                     <p class="sm:text-7xl text-5xl font-semibold text-white sm:leading-[80px] leading-tight">
@@ -102,7 +102,7 @@
                     </p>
                 </d>
                 <div class="lg:w-7/12 w-full">
-                    <form >
+                    <form netlify>
                         <div class="space-y-4">
                             <input type="text" name="name" class="w-full bg-transparent border-b border-jet-5 py-3 px-0 text-jet-3 placeholder:text-jet-3 focus:outline-none focus:border-b-emerald-1 transition-colors ease-in-out duration-150" placeholder="Name" />
                             <input type="email" name="email" class="w-full bg-transparent border-b border-jet-5 py-3 px-0 text-jet-3 placeholder:text-jet-3 focus:outline-none focus:border-b-emerald-1 transition-colors ease-in-out duration-150" placeholder="Email" />
