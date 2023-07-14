@@ -1,3 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://takka.group/'
 languageCode = 'en-us'
 title = 'Takka'
+copyright = "Copyright {year} © takka invest UG (haftungsbeschränkt) | All Rights Reserved."

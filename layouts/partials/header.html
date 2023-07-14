@@ -12,14 +12,27 @@
             </a>
         </div>
         <div class="lg:flex hidden items-center justify-center 2xl:gap-10 gap-7 mt-1">
-            <a href="#services" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
-            <a href="#aboutMe" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
-            <a href="#experience" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+            {{ if trim .Page.RelPermalink "/"}}
+                <a href="/#services" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
+                <a href="/#aboutMe" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
+                <a href="/#experience" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+            {{ else }}
+                <a href="#services" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
+                <a href="#aboutMe" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
+                <a href="#experience" class="text-sm text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+            {{ end }}
         </div>
         <div class="lg:flex hidden justify-end items-center gap-5">
-            <a href="#getInTouch" class="button-primary">
-                Get In Touch
-            </a>
+            {{ if trim .Page.RelPermalink "/"}}
+                <a href="/#getInTouch" class="button-primary">
+                    Get In Touch
+                </a>
+            {{ else }}
+                <a href="#getInTouch" class="button-primary">
+                    Get In Touch
+                </a>
+            {{ end }}
+
             <div class="flex items-center gap-3">
                 <a href="https://github.com/timo0" aria-label="Github" class=" bg-jet-2 flex items-center justify-center w-8 h-8">
                     <img class="w-5 h-5" src="{{ $githubIcon.RelPermalink }}" alt="GitHub Icon" />
@@ -55,10 +68,25 @@ x-transition:leave-end="opacity-0"  class="bg-jet-1 backdrop-blur-md fixed inset
                 <img class="h-20" src="{{ $logo.RelPermalink }}" alt="Logo" />
             </a>
             <div class="flex flex-col gap-5">
-                <a href="#services" @click="navbar = false" class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
-                <a href="#aboutMe" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
-                <a href="#experience" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+                {{ if trim .Page.RelPermalink "/"}}
+                    <a href="/#services" @click="navbar = false" class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
+                    <a href="/#aboutMe" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
+                    <a href="/#experience" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+                {{ else }}
+                    <a href="#services" @click="navbar = false" class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Services</a>
+                    <a href="#aboutMe" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">About Me</a>
+                    <a href="#experience" @click="navbar = false"  class="text-center text-white hover:text-emerald-1 transition-colors ease-in-out duration-150">Work Experience</a>
+                {{ end }}
             </div>
+            {{ if trim .Page.RelPermalink "/"}}
+                <a href="/#getInTouch" @click="navbar = false" class="button-primary">
+                    Get In Touch
+                </a>
+            {{ else }}
+                <a href="#getInTouch" @click="navbar = false" class="button-primary">
+                    Get In Touch
+                </a>
+            {{ end }}   
             <div class="flex items-center gap-3">
                 <a href="https://github.com/timo0" aria-label="Github" class=" bg-jet-2 flex items-center justify-center w-8 h-8">
                     <img class="w-5 h-5" src="{{ $githubIcon.RelPermalink }}" alt="GitHub Icon" />
